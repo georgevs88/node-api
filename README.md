@@ -48,4 +48,17 @@ npm install require-dir
 e utilizamos para fazer o require da pasta toda (pasta de models que criamos):
 requireDir('./src/models')
 
-			
+-----------------------------------------
+PAGINAÇÃO - mongoose-paginate:
+npm install mongoose-paginate
+
+Para buscar todos, ao invés de:
+const products = await Product.find()
+usamos:
+const products = await Product.paginate({},{ page: 1, limit: 10})			
+
+-----------------------------------------
+CORS - para permitir acesso externo (domínios, segurança):
+npm install cors
+
+app.use(cors())
